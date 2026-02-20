@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tamagotchi Pet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Tamagotchi Pet</h1>
+
+    <div class="pet-card">
+      <img id="pet-img" class="pet" src="assets/pet1.png" alt="Pet" />
+      <div class="stats">
+        <div class="stat-row">
+          <label for="hunger-bar">Hunger</label>
+          <progress id="hunger-bar" max="100" value="100"></progress>
+          <span id="hunger">100</span>
+        </div>
+        <div class="stat-row">
+          <label for="happiness-bar">Happiness</label>
+          <progress id="happiness-bar" max="100" value="100"></progress>
+          <span id="happiness">100</span>
+        </div>
+        <div class="stat-row">
+          <label for="energy-bar">Energy</label>
+          <progress id="energy-bar" max="100" value="100"></progress>
+          <span id="energy">100</span>
+        </div>
+        <div class="stat-row">
+          <label for="hygiene-bar">Hygiene</label>
+          <progress id="hygiene-bar" max="100" value="100"></progress>
+          <span id="hygiene">100</span>
+        </div>
+      </div>
+      <div class="controls">
+        <!-- image buttons: supply your own artwork in the assets folder with these names -->
+        <button id="feed" class="icon-btn"><img src="assets/feed.png" alt="Feed" /></button>
+        <button id="play" class="icon-btn"><img src="assets/play.png" alt="Play" /></button>
+        <button id="sleep" class="icon-btn"><img src="assets/sleep.png" alt="Sleep" /></button>
+        <button id="bathroom" class="icon-btn"><img src="assets/bathroom.png" alt="Bathroom" /></button>
+        <button id="reset" class="icon-btn"><img src="assets/reset.png" alt="Reset" /></button>
+        <!-- allows users to clear saved state without using console -->
+        <button id="clear-storage" class="icon-btn" title="Erase all saved pet data">
+          <img src="assets/clear.png" alt="Clear" />
+        </button>
+      </div>
+      <div class="log" id="log"></div>
+    </div>
+
+    <section class="notes">
+      <h2>How it works</h2>
+      <ul>
+        <li>Stats decay over time. Use buttons to interact.</li>
+        <li>State is saved to <code>localStorage</code>.</li>
+        <li>Click the pet emoji for a little surprise.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
